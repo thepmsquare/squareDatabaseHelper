@@ -19,7 +19,10 @@ try {
     "square",
     "public",
     "test",
-    true
+    true,
+    [],
+    1,
+    0
   );
   console.log(getRowsOutput);
 

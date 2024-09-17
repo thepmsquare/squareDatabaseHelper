@@ -53,7 +53,10 @@ class SquareDatabaseHelper {
     databaseName: string,
     schemaName: string,
     tableName: string,
-    ignoreFiltersAndGetAll = false
+    ignoreFiltersAndGetAll: boolean = false,
+    orderBy: string[] = [],
+    limit: number | undefined = undefined,
+    offset: number = 0
   ) {
     const url = `${this.baseUrl}/get_rows`;
     const body = {
@@ -62,6 +65,9 @@ class SquareDatabaseHelper {
       schema_name: schemaName,
       table_name: tableName,
       ignore_filters_and_get_all: ignoreFiltersAndGetAll,
+      order_by: orderBy,
+      limit,
+      offset,
     };
     return this.makeRequest(url, "POST", body);
   }

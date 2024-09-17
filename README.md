@@ -15,6 +15,10 @@ database helper for personal server.
 
 ## changelog
 
+### v1.0.1
+
+- add offset, limit and order_by in get_rows.
+
 ### v1.0.0
 
 - initial implementation.
